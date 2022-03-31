@@ -22,9 +22,12 @@ function NFTDropPage() {
             />
           </div>
           <div className="space-y-2 p-5 text-center">
-            <h1 className="text-4xl font-bold text-white">Krook Apes</h1>
-            <h2 className="text-4xl text-white">
-              A collection of apes is a cool community blablab
+            <h1 className="text-4xl font-bold text-white">
+              Antisocial Coding Club
+            </h1>
+            <h2 className="text-2xl font-light text-white">
+              The collection of anti-social coding club is a cool community of
+              coders who is very anti social.
             </h2>
           </div>
         </div>
@@ -33,11 +36,11 @@ function NFTDropPage() {
       {/* Right */}
       <div className="flex flex-1 flex-col p-12 lg:col-span-6">
         {/* Header */}
-        <header className="flex items-center justify-between">
+        <header className="mb-4 flex items-center justify-between">
           <h1 className="w-52 cursor-pointer text-xl font-extralight sm:w-80">
             The{' '}
             <span className="font-bold underline decoration-pink-500/50">
-              Krook
+              Pixel Lab
             </span>{' '}
             NFT Market Place
           </h1>
@@ -60,7 +63,7 @@ function NFTDropPage() {
             alt=""
           />
           <h1 className="text-3xl font-bold lg:text-5xl lg:font-extrabold">
-            The PAPAFAM Ape Coding CLub | NFT
+            The Antisocial Coding Club | NFT
           </h1>
           <p className="pt-2 text-xl text-green-500">13 / 21 NFTs claimed</p>
         </div>
