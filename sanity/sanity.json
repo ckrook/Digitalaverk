@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "nftdrop"
+    "name": "NFT-Drop"
   },
   "api": {
-    "projectId": "s7muljnm",
+    "projectId": "byogxp4l",
     "dataset": "production"
   },
   "plugins": [
