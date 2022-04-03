@@ -47,7 +47,7 @@ const Home = ({ collections }: Props) => {
         </section>
 
         <section>
-          <div className="my-20 flex flex-col px-10 md:flex-row md:space-x-8">
+          <div className="my-32 flex flex-col px-10 md:flex-row md:space-x-8">
             <div className="flex-1">
               <h2 className="mb-8 text-5xl">
                 Samlarföremål för den digitala åldern
@@ -64,7 +64,7 @@ const Home = ({ collections }: Props) => {
           </div>
         </section>
         <section>
-          <div className="my-20 flex flex-col space-y-8 space-x-0 px-10 md:flex-row md:space-x-8 md:space-y-0">
+          <div className="my-32 flex flex-col space-y-8 space-x-0 px-10 md:flex-row md:space-x-8 md:space-y-0">
             <div className="flex-1 rounded-3xl bg-teal-400 p-10">
               <h2 className="mb-4 text-4xl text-emerald-100">
                 Vårt miljöavtryck spelar roll
@@ -85,8 +85,8 @@ const Home = ({ collections }: Props) => {
             </div>
           </div>
         </section>
-        <section className="bg-slate-100 p-10 shadow-xl shadow-slate-200/20">
-          <h2 className="mb-8 text-4xl">Hitta din favorit kollektion</h2>
+        <section className="bg-slate-100 p-10 py-32 shadow-xl shadow-slate-200/20">
+          <h2 className="mb-8 text-5xl">Hitta din favorit kollektion</h2>
           <div className="grid space-x-3 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
             {collections.map((collection) => (
               <Link href={`/nft/${collection.slug.current}`}>

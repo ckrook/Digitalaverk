@@ -86,9 +86,9 @@ function NFTDropPage({ collection }: Props) {
             padding: '20px',
           },
         })
-        console.log(receipt)
-        console.log(claimedTokenId)
-        console.log(claimedNFT)
+        // console.log(receipt)
+        // console.log(claimedTokenId)
+        // console.log(claimedNFT)
       })
       .catch((err) => {
         console.log(err)
@@ -150,13 +150,13 @@ function NFTDropPage({ collection }: Props) {
             onClick={() => (address ? disconnect() : connectWithMetamask())}
             className="rounded-full bg-rose-500 px-4 py-2 text-xs font-bold text-white lg:px-5 lg:py-3 lg:text-base"
           >
-            {address ? 'Sign out' : 'Sign in'}
+            {address ? 'Logga ut' : 'Logga in'}
           </button>
         </header>
         <hr className="my-2 border" />
         {address && (
           <p className="text-right text-sm text-gray-500">
-            Your logged in with wallet {address.substring(0, 5)}...
+            Du är inloggad med address {address.substring(0, 5)}...
             {address.substring(address.length - 5)}
           </p>
         )}
@@ -180,10 +180,7 @@ function NFTDropPage({ collection }: Props) {
             </p>
           )}
           {loading && (
-            <img
-              src="https://cdn.hackernoon.com/images/0*4Gzjgh9Y7Gu8KEtZ.gif"
-              alt=""
-            />
+            <span className=" h-15 w-15 inline-flex animate-ping rounded-full bg-sky-400 opacity-75"></span>
           )}
         </div>
         {/* Mint Button */}
@@ -195,13 +192,13 @@ function NFTDropPage({ collection }: Props) {
           className="h-16 w-full rounded-full bg-rose-500 font-bold text-white disabled:bg-gray-400"
         >
           {loading ? (
-            <>Loading</>
+            <>Laddar..</>
           ) : claimedSupply === totalSupply?.toNumber() ? (
-            <>SOLD OUT</>
+            <>UTSÅLT</>
           ) : !address ? (
-            <>Sign in to Mint</>
+            <>Logga in för att köpa</>
           ) : (
-            <span className="font-bold">Mint NFT for ({priceInEth} ETH)</span>
+            <span className="font-bold">Köp NFT för ({priceInEth} ETH)</span>
           )}
         </button>
       </div>
