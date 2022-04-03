@@ -111,7 +111,7 @@ function NFTDropPage({ collection }: Props) {
   return (
     <div className="flex h-screen flex-col lg:grid lg:grid-cols-10">
       <Head>
-        <title>NFT Drop</title>
+        <title>Digitalverket</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -143,7 +143,7 @@ function NFTDropPage({ collection }: Props) {
         <header className="mb-4 flex items-center justify-between">
           <Link href={`/`}>
             <h1 className="w-52 cursor-pointer text-xl font-bold sm:w-80">
-              Brand
+              Digitalverket
             </h1>
           </Link>
           <button

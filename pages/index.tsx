@@ -8,6 +8,7 @@ import '@fontsource/noto-sans/300.css'
 import '@fontsource/playfair-display/400.css'
 import { AiOutlinePlus, AiOutlineTwitter } from 'react-icons/ai'
 import { GiHamburgerMenu } from 'react-icons/gi'
+import { SiMonkeytie } from 'react-icons/si'
 interface Props {
   collections: Collection[]
 }
@@ -16,7 +17,7 @@ const Home = ({ collections }: Props) => {
   return (
     <div className="mx-auto flex min-h-screen flex-col  2xl:px-0">
       <Head>
-        <title>NFT Drop</title>
+        <title>Digitalverket</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -26,7 +27,10 @@ const Home = ({ collections }: Props) => {
             {/* <p className="text-blue-500">Follow us!</p> */}
             <AiOutlineTwitter className="h-8 w-8 text-blue-500" />
           </a>
-          <h1 className="text-4xl font-bold">Digitalverket</h1>
+          <div className="flex items-center">
+            <SiMonkeytie className="mr-2 text-4xl" />
+            <h1 className="text-4xl font-bold">Digitalverket</h1>
+          </div>
           <div>
             <button>
               <GiHamburgerMenu className="cursor-pointer text-3xl" />
@@ -104,7 +108,10 @@ const Home = ({ collections }: Props) => {
         <section>
           <div className="flex flex-col bg-stone-100 py-20 px-10 md:flex-row">
             <div className="flex-1">
-              <h2 className="mb-4 text-5xl">Dina frågor besvarade</h2>
+              <h2 className="mb-4 text-5xl">
+                Dina frågor
+                <br /> besvarade
+              </h2>
             </div>
             <div className="flex-1">
               <ul>
