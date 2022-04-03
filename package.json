@@ -6,6 +6,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fontsource/noto-sans": "^4.5.9",
+    "@fontsource/open-sans": "^4.5.8",
+    "@fontsource/playfair-display": "^4.5.6",
     "@sanity/cli": "^2.29.3",
     "@sanity/image-url": "^1.0.1",
     "@thirdweb-dev/react": "^2.0.3",
