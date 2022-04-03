@@ -6,6 +6,7 @@ import { sanityClient, urlFor } from '../sanity'
 import { Collection } from '../typings'
 import '@fontsource/noto-sans/300.css'
 import '@fontsource/playfair-display/400.css'
+import { AiOutlinePlus } from 'react-icons/ai'
 
 interface Props {
   collections: Collection[]
@@ -30,7 +31,7 @@ const Home = ({ collections }: Props) => {
       </header>
 
       <main className="">
-        <section className="bg-orange-200 py-40">
+        <section className="bg-orange-200 py-40 text-center">
           <h2 className="text-4xl">
             Välkommen till Sveriges äldsta NFT marknadsplats
           </h2>
@@ -101,12 +102,24 @@ const Home = ({ collections }: Props) => {
               <h2 className="mb-4 text-5xl">Dina frågor besvarade</h2>
             </div>
             <div className="flex-1">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-                excepturi iure incidunt quidem fugit ipsa eligendi aspernatur
-                facilis, earum dolorem, repellat, officiis ab suscipit adipisci?
-                Consequatur perspiciatis provident quas voluptatum.
-              </p>
+              <ul>
+                <li className="flex justify-between border-b py-5">
+                  <p>Vad är en NFT?</p>
+                  <AiOutlinePlus />
+                </li>
+                <li className="flex justify-between border-b py-5">
+                  <p>Vem står bakom [Brandname]?</p>
+                  <AiOutlinePlus />
+                </li>
+                <li className="flex justify-between border-b py-5">
+                  <p>Vad är Ethereum?</p>
+                  <AiOutlinePlus />
+                </li>
+                <li className="flex justify-between border-b py-5">
+                  <p>Hur mintar jag en NFT?</p>
+                  <AiOutlinePlus />
+                </li>
+              </ul>
             </div>
           </div>
         </section>
