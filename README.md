@@ -1,3 +1,4 @@
-# NFT Minting platform
+# Digitalverket
 
-Building my own NFT minting platform using Next.js
+Digitalverket is for now just a conceptual NFT marketplace for Swedish artists where NFT collections can be uploaded with sanity.io and minted with Thirdweb.
+
