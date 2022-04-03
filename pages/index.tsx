@@ -6,8 +6,8 @@ import { sanityClient, urlFor } from '../sanity'
 import { Collection } from '../typings'
 import '@fontsource/noto-sans/300.css'
 import '@fontsource/playfair-display/400.css'
-import { AiOutlinePlus } from 'react-icons/ai'
-
+import { AiOutlinePlus, AiOutlineTwitter } from 'react-icons/ai'
+import { GiHamburgerMenu } from 'react-icons/gi'
 interface Props {
   collections: Collection[]
 }
@@ -22,10 +22,13 @@ const Home = ({ collections }: Props) => {
 
       <header>
         <div className="mx-auto my-10 flex w-11/12 items-center justify-between">
-          <div>social</div>
+          <a href="/" className="flex items-center ">
+            {/* <p className="text-blue-500">Follow us!</p> */}
+            <AiOutlineTwitter className="h-8 w-8 text-blue-500" />
+          </a>
           <h1 className="text-4xl font-bold">Brand</h1>
           <div>
-            <button>Contact</button>
+            <GiHamburgerMenu className="cursor-pointer text-3xl" />
           </div>
         </div>
       </header>
@@ -33,7 +36,7 @@ const Home = ({ collections }: Props) => {
       <main className="">
         <section className="bg-orange-200 py-40 text-center">
           <h2 className="text-4xl">
-            Välkommen till Sveriges äldsta NFT marknadsplats
+            Välkommen till Sveriges största NFT marknadsplats
           </h2>
         </section>
 
@@ -124,6 +127,14 @@ const Home = ({ collections }: Props) => {
           </div>
         </section>
       </main>
+      <footer>
+        <div className="p-4 text-center text-gray-700">
+          © 2021 Copyright:{' '}
+          <a className="text-gray-800" href="https://tailwind-elements.com/">
+            Charles Krook
+          </a>
+        </div>
+      </footer>
     </div>
   )
 }
