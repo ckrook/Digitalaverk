@@ -11,6 +11,9 @@ import { Collection } from '../../typings'
 import Link from 'next/link'
 import { BigNumber, ethers } from 'ethers'
 import toast, { Toaster } from 'react-hot-toast'
+import '@fontsource/noto-sans/300.css'
+import '@fontsource/playfair-display/400.css'
+import Head from 'next/head'
 
 interface Props {
   collection: Collection
@@ -107,11 +110,16 @@ function NFTDropPage({ collection }: Props) {
 
   return (
     <div className="flex h-screen flex-col lg:grid lg:grid-cols-10">
+      <Head>
+        <title>NFT Drop</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <Toaster position="bottom-center" />
       {/* Left */}
-      <div className="bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 lg:col-span-4">
+      <div className="bg-gradient-to-tr from-gray-700 via-gray-900 to-black lg:col-span-4">
         <div className="flex flex-col items-center justify-center py-8 py-2 lg:min-h-screen">
-          <div className="rounded-2xl bg-gradient-to-r from-rose-100 to-teal-100 p-4">
+          <div className="rounded-2xl bg-gradient-to-r from-rose-100 to-teal-100 p-2">
             <img
               className="w-44 rounded-xl object-cover lg:h-96 lg:w-72"
               src={urlFor(collection.mainImage).url()}
@@ -119,12 +127,12 @@ function NFTDropPage({ collection }: Props) {
             />
           </div>
           <div className="space-y-2 p-5 text-center">
-            <h1 className="text-4xl font-bold text-white">
+            <h2 className="mb-4 text-4xl font-bold text-white">
               {collection.nftCollectionName}
-            </h1>
-            <h2 className="text-2xl font-light text-white">
-              {collection.description}
             </h2>
+            <p className="text-2xl font-light text-white">
+              {collection.description}
+            </p>
           </div>
         </div>
       </div>
@@ -134,12 +142,8 @@ function NFTDropPage({ collection }: Props) {
         {/* Header */}
         <header className="mb-4 flex items-center justify-between">
           <Link href={`/`}>
-            <h1 className="w-52 cursor-pointer text-xl font-extralight sm:w-80">
-              The{' '}
-              <span className="font-bold underline decoration-pink-500/50">
-                Pixel Lab
-              </span>{' '}
-              NFT Market Place
+            <h1 className="w-52 cursor-pointer text-xl font-bold sm:w-80">
+              Brand
             </h1>
           </Link>
           <button

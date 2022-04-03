@@ -76,21 +76,19 @@ const Home = ({ collections }: Props) => {
           </div>
         </section>
         <section className="bg-slate-100 p-10 shadow-xl shadow-slate-200/20">
-          <h2 className="mb-4 text-4xl">Hitta din favorit kollektion</h2>
+          <h2 className="mb-8 text-4xl">Hitta din favorit kollektion</h2>
           <div className="grid space-x-3 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
             {collections.map((collection) => (
               <Link href={`/nft/${collection.slug.current}`}>
-                <div className="flex cursor-pointer flex-col items-center transition-all duration-200 hover:scale-105">
+                <div className="flex cursor-pointer flex-col items-center rounded-3xl bg-gray-50 p-10 transition-all duration-200 hover:scale-105">
                   <img
-                    className="h-96 w-60 rounded-2xl object-cover"
+                    className="mb-5 h-96 w-60 rounded-2xl object-cover"
                     src={urlFor(collection.mainImage).url()}
                     alt=""
                   />
-                  <div className="p-5">
-                    <h3 className="text-3xl">{collection.title}</h3>
-                    <p className="mt-2 text-sm text-gray-400">
-                      {collection.description}
-                    </p>
+                  <div className=" text-center">
+                    <h3 className="mb-4 text-3xl">{collection.title}</h3>
+                    <p className="text-gray-400">{collection.description}</p>
                   </div>
                 </div>
               </Link>
