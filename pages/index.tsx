@@ -13,16 +13,16 @@ interface Props {
 
 const Home = ({ collections }: Props) => {
   return (
-    <div className="mx-auto flex min-h-screen flex-col py-10 px-10 2xl:px-0">
+    <div className="mx-auto flex min-h-screen flex-col  2xl:px-0">
       <Head>
         <title>NFT Drop</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <header>
-        <div className="mx-auto flex w-11/12 justify-between">
+        <div className="mx-auto my-10 flex w-11/12 items-center justify-between">
           <div>social</div>
-          <h1 className="mb-10 text-4xl font-bold">Brand</h1>
+          <h1 className="text-4xl font-bold">Brand</h1>
           <div>
             <button>Contact</button>
           </div>
@@ -30,7 +30,53 @@ const Home = ({ collections }: Props) => {
       </header>
 
       <main className="">
+        <section className="bg-orange-200 py-40">
+          <h2 className="text-4xl">
+            Välkommen till Sveriges äldsta NFT marknadsplats
+          </h2>
+        </section>
+
+        <section>
+          <div className="my-20 flex flex-col px-10 md:flex-row md:space-x-8">
+            <div className="flex-1">
+              <h2 className="mb-8 text-5xl">
+                Samlarföremål för den digitala åldern
+              </h2>
+            </div>
+            <div className="flex-1">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+                excepturi iure incidunt quidem fugit ipsa eligendi aspernatur
+                facilis, earum dolorem, repellat, officiis ab suscipit adipisci?
+                Consequatur perspiciatis provident quas voluptatum.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="my-20 flex flex-col space-y-8 space-x-0 px-10 md:flex-row md:space-x-8 md:space-y-0">
+            <div className="flex-1 rounded-3xl bg-teal-400 p-10">
+              <h2 className="mb-4 text-4xl text-emerald-100">
+                Vårt miljöavtryck spelar roll
+              </h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Accusamus officia dignissimos, explicabo, a cumque temporibus
+              </p>
+            </div>
+            <div className="flex-1 rounded-3xl bg-amber-600 p-10">
+              <h2 className="mb-4 text-4xl text-orange-100">
+                En ny era av konstnärer
+              </h2>
+              <p className="text-orange-200">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Accusamus officia dignissimos, explicabo, a cumque temporibus
+              </p>
+            </div>
+          </div>
+        </section>
         <section className="bg-slate-100 p-10 shadow-xl shadow-slate-200/20">
+          <h2 className="mb-4 text-4xl">Hitta din favorit kollektion</h2>
           <div className="grid space-x-3 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
             {collections.map((collection) => (
               <Link href={`/nft/${collection.slug.current}`}>
@@ -52,11 +98,9 @@ const Home = ({ collections }: Props) => {
           </div>
         </section>
         <section>
-          <div className="my-20 flex">
+          <div className="flex flex-col bg-stone-100 py-20 px-10 md:flex-row">
             <div className="flex-1">
-              <h2 className="text-5xl">
-                Samlarföremål för den digitala åldern
-              </h2>
+              <h2 className="mb-4 text-5xl">Dina frågor besvarade</h2>
             </div>
             <div className="flex-1">
               <p>
@@ -64,24 +108,6 @@ const Home = ({ collections }: Props) => {
                 excepturi iure incidunt quidem fugit ipsa eligendi aspernatur
                 facilis, earum dolorem, repellat, officiis ab suscipit adipisci?
                 Consequatur perspiciatis provident quas voluptatum.
-              </p>
-            </div>
-          </div>
-        </section>
-        <section>
-          <div className="my-20 flex space-x-4">
-            <div className="flex-1 rounded-3xl bg-green-300 p-10">
-              <h2 className="mb-4 text-4xl">Vårt miljöavtryck spelar roll</h2>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Accusamus officia dignissimos, explicabo, a cumque temporibus
-              </p>
-            </div>
-            <div className="flex-1 rounded-3xl bg-green-300 p-10">
-              <h2 className="mb-4 text-4xl">En ny era av konstnärer</h2>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Accusamus officia dignissimos, explicabo, a cumque temporibus
               </p>
             </div>
           </div>
