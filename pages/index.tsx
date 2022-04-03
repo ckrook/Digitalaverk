@@ -120,7 +120,7 @@ const Home = ({ collections }: Props) => {
                   <AiOutlinePlus />
                 </li>
                 <li className="flex justify-between border-b py-5">
-                  <p>Vem står bakom [Brandname]?</p>
+                  <p>Vem står bakom Digitalverket?</p>
                   <AiOutlinePlus />
                 </li>
                 <li className="flex justify-between border-b py-5">
