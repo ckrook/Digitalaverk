@@ -26,9 +26,11 @@ const Home = ({ collections }: Props) => {
             {/* <p className="text-blue-500">Follow us!</p> */}
             <AiOutlineTwitter className="h-8 w-8 text-blue-500" />
           </a>
-          <h1 className="text-4xl font-bold">Brand</h1>
+          <h1 className="text-4xl font-bold">Digitalverket</h1>
           <div>
-            <GiHamburgerMenu className="cursor-pointer text-3xl" />
+            <button>
+              <GiHamburgerMenu className="cursor-pointer text-3xl" />
+            </button>
           </div>
         </div>
       </header>
@@ -84,7 +86,7 @@ const Home = ({ collections }: Props) => {
           <div className="grid space-x-3 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
             {collections.map((collection) => (
               <Link href={`/nft/${collection.slug.current}`}>
-                <div className="flex cursor-pointer flex-col items-center rounded-3xl bg-gray-50 p-10 transition-all duration-200 hover:scale-105">
+                <div className="flex scale-90 cursor-pointer flex-col items-center rounded-3xl bg-gray-50 p-10 transition-all duration-200 hover:scale-95">
                   <img
                     className="mb-5 h-96 w-60 rounded-2xl object-cover"
                     src={urlFor(collection.mainImage).url()}
