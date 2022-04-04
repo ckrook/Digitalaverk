@@ -4,6 +4,8 @@
 
 body {
   font-family: 'noto-sans', sans-serif;
+  font-weight: 100;
+  background-color: #fafaf9;
 }
 
 h2,
@@ -11,9 +13,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Playfair Display';
+  @apply font-['Playfair_Display'] text-gray-800;
 }
 
 p {
-  @apply text-lg text-gray-600;
+  @apply text-lg leading-relaxed text-gray-600;
 }

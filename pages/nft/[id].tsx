@@ -14,6 +14,7 @@ import toast, { Toaster } from 'react-hot-toast'
 import '@fontsource/noto-sans/300.css'
 import '@fontsource/playfair-display/400.css'
 import Head from 'next/head'
+import { SiMonkeytie } from 'react-icons/si'
 
 interface Props {
   collection: Collection
@@ -142,8 +143,8 @@ function NFTDropPage({ collection }: Props) {
         {/* Header */}
         <header className="mb-4 flex items-center justify-between">
           <Link href={`/`}>
-            <h1 className="w-52 cursor-pointer text-xl font-bold sm:w-80">
-              Digitalverket
+            <h1 className="flex w-52 cursor-pointer items-center text-xl font-bold sm:w-80">
+              <SiMonkeytie className="mr-2" /> Digitalverket
             </h1>
           </Link>
           <button
