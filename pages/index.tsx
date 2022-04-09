@@ -22,31 +22,30 @@ const Home = ({ collections }: Props) => {
   }
 
   return (
-    <div className="mx-auto flex min-h-screen flex-col  2xl:px-0">
+    <div className="mx-auto flex min-h-screen flex-col 2xl:px-0">
       <Head>
         <title>Digitalverket</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <header>
-        <div className="mx-auto flex w-11/12 items-center justify-between border-b py-10">
+        <div className="mx-auto flex items-center justify-between border-b py-10 px-4 md:w-11/12">
           <a href="/" className="flex items-center ">
             {/* <p className="text-blue-500">Follow us!</p> */}
-            <AiOutlineTwitter className="h-8 w-8 text-blue-500" />
+            <AiOutlineTwitter className="hidden h-8 w-8 text-blue-500 md:block" />
           </a>
           <div className="flex items-center">
             <SiMonkeytie className="mr-2 text-4xl" />
-            <h1 className="text-4xl font-bold">Digitalaverk</h1>
+            <h1 className="text-2xl font-bold lg:text-4xl">Digitalaverk</h1>
           </div>
-          <div>
-            <button onClick={() => toggleMenu()}>
-              <GiHamburgerMenu className="cursor-pointer text-3xl" />
-            </button>
-          </div>
+
+          <button onClick={() => toggleMenu()}>
+            <GiHamburgerMenu className="cursor-pointer text-3xl" />
+          </button>
         </div>
         {menuOpen ? (
           <nav>
-            <ul className="flex justify-center space-x-24 py-5">
+            <ul className="my-2 flex flex-col justify-center space-y-4 space-x-0 py-2 text-center sm:flex-row sm:space-y-0 sm:space-x-12 sm:py-0 md:flex-row md:text-left lg:space-x-24">
               <li>Hem</li>
               <li>Konstnärer</li>
               <li>Kollektioner</li>
@@ -60,16 +59,16 @@ const Home = ({ collections }: Props) => {
         )}
       </header>
       <main className="">
-        <section className="bg-slate-800 py-40 text-center">
+        <section className="bg-slate-800 py-40 px-4 text-center">
           <h2 className="text-4xl text-white">
             Välkommen till Sveriges största NFT marknadsplats
           </h2>
         </section>
 
         <section>
-          <div className="my-24 flex flex-col px-24 md:flex-row md:space-x-8">
+          <div className="my-14 flex flex-col px-8 md:my-24 md:flex-row md:space-x-8 lg:px-24">
             <div className="flex-1">
-              <h2 className="mb-8 text-6xl">
+              <h2 className="mb-8 text-4xl lg:text-6xl">
                 Samlarföremål <br />
                 för den digitala åldern
               </h2>
@@ -86,7 +85,7 @@ const Home = ({ collections }: Props) => {
           </div>
         </section>
         <section>
-          <div className="my-24 flex flex-col space-y-8 space-x-0 px-24 md:flex-row md:space-x-8 md:space-y-0">
+          <div className="my-14 flex flex-col space-y-8 space-x-0 px-8 md:my-24 md:flex-row md:space-x-8 md:space-y-0 lg:px-24">
             <div className="flex-1 rounded-3xl bg-orange-100 p-10">
               <h2 className="mb-4 text-4xl text-stone-600">
                 Vårt miljöavtryck spelar roll
@@ -107,8 +106,10 @@ const Home = ({ collections }: Props) => {
             </div>
           </div>
         </section>
-        <section className="bg-slate-100 p-10 px-24 py-24 shadow-xl shadow-slate-200/20">
-          <h2 className="mb-8 text-5xl">Hitta din favorit kollektion</h2>
+        <section className="bg-slate-100 p-10 px-8 py-14 shadow-xl shadow-slate-200/20 md:py-24 lg:px-24">
+          <h2 className="mb-8 text-4xl md:text-5xl">
+            Hitta din favorit kollektion
+          </h2>
           <div className="grid space-x-3 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
             {collections.map((collection) => (
               <Link href={`/nft/${collection.slug.current}`}>
@@ -128,9 +129,9 @@ const Home = ({ collections }: Props) => {
           </div>
         </section>
         <section>
-          <div className="flex flex-col bg-stone-100 py-24 px-24 md:flex-row">
+          <div className="flex flex-col bg-stone-100 py-14 px-8 md:flex-row md:py-24 lg:px-24">
             <div className="flex-1">
-              <h2 className="mb-4 text-7xl">
+              <h2 className="mb-4 text-3xl lg:text-7xl">
                 Dina frågor,
                 <br /> <i>besvarade</i>
               </h2>
