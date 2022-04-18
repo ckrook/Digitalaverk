@@ -23,7 +23,7 @@ const Home = ({ collections }: Props) => {
   }
 
   return (
-    <div className="mx-auto flex min-h-screen flex-col 2xl:px-0">
+    <div className="mx-auto flex min-h-screen max-w-[1400px] flex-col 2xl:px-0">
       <Head>
         <title>Digitalverket</title>
         <link rel="icon" href="/favicon.ico" />
@@ -46,11 +46,11 @@ const Home = ({ collections }: Props) => {
             </div>
             <div className="flex-1">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-                excepturi iure incidunt quidem fugit ipsa eligendi aspernatur
-                facilis, earum dolorem, repellat, officiis ab suscipit adipisci?
-                Consequatur perspiciatis provident quas voluptatum. excepturi
-                iure incidunt quidem fugit ipsa eligendi
+                Samlarföremål har sedan länge bara existerat i det fysiska
+                rummet, men i och med att vår värld har digitaliseras i allt
+                större utsträckning så tror vi att konstverk inte längre bara
+                bara tillhör en liten del av samhället utan ska kunna uppskattas
+                av alla.
               </p>
             </div>
           </div>
@@ -62,8 +62,8 @@ const Home = ({ collections }: Props) => {
                 Vårt miljöavtryck spelar roll
               </h2>
               <p className="text-gray-50">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Accusamus officia dignissimos, explicabo, a cumque temporibus
+                Vi värnar om det miljöavtryck som vi gör på vår jord och väljer
+                därför att sälja konstverken på Ethereums blockkedja
               </p>
             </div>
             <div className="flex-1 rounded-xl bg-slate-700 p-10">
@@ -71,13 +71,13 @@ const Home = ({ collections }: Props) => {
                 En ny era av konstnärer
               </h2>
               <p className="text-gray-50">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Accusamus officia dignissimos, explicabo, a cumque temporibus
+                Med en ny era av samlarverk som kan befinna sig på blockkedjan
+                så kommer därtill nya konstnärer.
               </p>
             </div>
           </div>
         </section>
-        <section className="bg-slate-100 p-10 px-8 py-14 shadow-xl shadow-slate-200/20 md:py-24 lg:px-24">
+        <section className="bg-stone-100 p-10 px-8 py-14 shadow-xl shadow-slate-200/20 md:py-24 lg:px-24">
           <h2 className="mb-8 text-4xl md:text-5xl">
             Hitta din favorit kollektion
           </h2>

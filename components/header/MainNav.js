@@ -4,10 +4,10 @@ function MainNav() {
   return (
     <div>
       <div className="mx-auto flex items-center justify-between border-b py-3 px-4 md:w-11/12">
-        <div className="flex items-center justify-around space-x-16">
-          <h1 className=" flex-1 text-2xl ">Krooks</h1>
-          <nav className="flex-1">
-            <ol className="flex space-x-24 text-sm font-medium uppercase tracking-widest">
+        <div className="flex w-full items-center justify-center space-x-0 sm:justify-between md:space-x-16">
+          <h1 className="hidden text-2xl sm:block">Krooks</h1>
+          <nav>
+            <ol className="flex space-x-8 text-sm font-medium uppercase tracking-widest md:space-x-12 md:space-x-24">
               <li>
                 <a href="#">Kollektioner</a>
               </li>
@@ -21,7 +21,7 @@ function MainNav() {
           </nav>
         </div>
         <input
-          className="rounded-md border border-gray-300 bg-[#fafaf9] p-1"
+          className="hidden rounded-md border border-gray-300 bg-[#fafaf9] p-1 lg:block"
           type="text"
           placeholder="Hello world"
         />

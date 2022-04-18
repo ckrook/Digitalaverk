@@ -112,7 +112,7 @@ function NFTDropPage({ collection }: Props) {
   return (
     <div className="flex h-screen flex-col lg:grid lg:grid-cols-10">
       <Head>
-        <title>Digitalverket</title>
+        <title>Krooks | {collection.nftCollectionName}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -144,7 +144,7 @@ function NFTDropPage({ collection }: Props) {
         <header className="mb-4 flex items-center justify-between">
           <Link href={`/`}>
             <h1 className="flex w-52 cursor-pointer items-center text-xl font-bold sm:w-80">
-              <SiMonkeytie className="mr-2" /> Digitalverket
+              Krooks
             </h1>
           </Link>
           <button
