@@ -6,10 +6,11 @@ import { sanityClient, urlFor } from '../sanity'
 import { Collection } from '../typings'
 import '@fontsource/noto-sans/100.css'
 import '@fontsource/playfair-display/400.css'
-import { AiOutlinePlus, AiOutlineTwitter } from 'react-icons/ai'
-import { GiHamburgerMenu } from 'react-icons/gi'
-import { SiMonkeytie } from 'react-icons/si'
+import { AiOutlinePlus } from 'react-icons/ai'
 import { useState } from 'react'
+
+import Header from '../components/header/Header'
+
 interface Props {
   collections: Collection[]
 }
@@ -27,51 +28,21 @@ const Home = ({ collections }: Props) => {
         <title>Digitalverket</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <header>
-        <div className="mx-auto flex items-center justify-between border-b py-10 px-4 md:w-11/12">
-          <a href="/" className="flex items-center ">
-            {/* <p className="text-blue-500">Follow us!</p> */}
-            <AiOutlineTwitter className="hidden h-8 w-8 text-blue-500 md:block" />
-          </a>
-          <div className="flex items-center">
-            <SiMonkeytie className="mr-2 text-4xl" />
-            <h1 className="text-2xl font-bold lg:text-4xl">Digitalaverk</h1>
-          </div>
-
-          <button onClick={() => toggleMenu()}>
-            <GiHamburgerMenu className="cursor-pointer text-3xl" />
-          </button>
-        </div>
-        {menuOpen ? (
-          <nav>
-            <ul className="my-2 flex flex-col justify-center space-y-4 space-x-0 py-2 text-center sm:flex-row sm:space-y-0 sm:space-x-12 sm:py-0 md:flex-row md:text-left lg:space-x-24">
-              <li>Hem</li>
-              <li>Konstnärer</li>
-              <li>Kollektioner</li>
-              <li>Lorem</li>
-              <li>Kontakt</li>
-              <li>FAQ</li>
-            </ul>
-          </nav>
-        ) : (
-          <></>
-        )}
-      </header>
+      <Header />
       <main className="">
-        <section className="bg-slate-800 py-40 px-4 text-center">
-          <h2 className="text-4xl text-white">
-            Välkommen till Sveriges största NFT marknadsplats
+        <section className="bg-gradient-to-r from-cyan-500 to-blue-500 py-[95px] px-4 text-center">
+          <h2 className="text-5xl text-white">
+            Samlarföremål för den digitala åldern
           </h2>
         </section>
 
         <section>
-          <div className="my-14 flex flex-col px-8 md:my-24 md:flex-row md:space-x-8 lg:px-24">
+          <div className="my-14 flex flex-col px-8 md:my-[111px] md:flex-row md:space-x-8 lg:px-24">
             <div className="flex-1">
-              <h2 className="mb-8 text-4xl lg:text-6xl">
+              <h3 className="mb-8 text-4xl lg:text-6xl">
                 Samlarföremål <br />
                 för den digitala åldern
-              </h2>
+              </h3>
             </div>
             <div className="flex-1">
               <p>
@@ -79,27 +50,27 @@ const Home = ({ collections }: Props) => {
                 excepturi iure incidunt quidem fugit ipsa eligendi aspernatur
                 facilis, earum dolorem, repellat, officiis ab suscipit adipisci?
                 Consequatur perspiciatis provident quas voluptatum. excepturi
-                iure incidunt quidem fugit ipsa eligendi aspernaturexcepturi
+                iure incidunt quidem fugit ipsa eligendi
               </p>
             </div>
           </div>
         </section>
         <section>
           <div className="my-14 flex flex-col space-y-8 space-x-0 px-8 md:my-24 md:flex-row md:space-x-8 md:space-y-0 lg:px-24">
-            <div className="flex-1 rounded-3xl bg-orange-100 p-10">
-              <h2 className="mb-4 text-4xl text-stone-600">
+            <div className="flex-1 rounded-xl bg-orange-700 p-10">
+              <h2 className="mb-4 text-4xl text-white">
                 Vårt miljöavtryck spelar roll
               </h2>
-              <p className="text-stone-500">
+              <p className="text-gray-50">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Accusamus officia dignissimos, explicabo, a cumque temporibus
               </p>
             </div>
-            <div className="flex-1 rounded-3xl bg-stone-400 p-10">
-              <h2 className="mb-4 text-4xl text-orange-100">
+            <div className="flex-1 rounded-xl bg-slate-700 p-10">
+              <h2 className="mb-4 text-4xl text-white">
                 En ny era av konstnärer
               </h2>
-              <p className="text-orange-200">
+              <p className="text-gray-50">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Accusamus officia dignissimos, explicabo, a cumque temporibus
               </p>

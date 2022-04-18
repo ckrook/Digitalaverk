@@ -2,20 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'newyork';
+  src: url('../public/fonts/newyork.ttf');
+}
+
 body {
   font-family: 'noto-sans', sans-serif;
   font-weight: 100;
   background-color: #fafaf9;
 }
 
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  @apply font-['Playfair_Display'] text-gray-800;
+  @apply font-newyork;
 }
 
 p {
   @apply text-lg leading-relaxed text-gray-600;
+}
+
+.sm-nav {
+  @apply text-[11px] uppercase tracking-widest;
+}
+
+.md-nav {
+  @apply font-bold;
 }
