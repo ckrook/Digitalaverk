@@ -4,7 +4,7 @@ function MainNav() {
   return (
     <div>
       <div className="mx-auto flex items-center justify-between border-b py-3 px-4 md:w-11/12">
-        <div className="flex w-full items-center justify-center space-x-0 sm:justify-between md:space-x-16">
+        <div className="flex w-full items-center justify-center space-x-0 sm:justify-between md:justify-start md:space-x-16">
           <h1 className="hidden text-2xl sm:block">Krooks</h1>
           <nav>
             <ol className="flex space-x-8 text-sm font-medium uppercase tracking-widest md:space-x-12 md:space-x-24">
